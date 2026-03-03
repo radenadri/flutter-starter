@@ -4,8 +4,8 @@ part 'number_trivia_model.freezed.dart';
 part 'number_trivia_model.g.dart';
 
 @freezed
-class NumberTriviaModel with _$NumberTriviaModel {
-  factory NumberTriviaModel({
+abstract class NumberTriviaModel with _$NumberTriviaModel {
+  const factory NumberTriviaModel({
     required int number,
     required String text,
     required String type,

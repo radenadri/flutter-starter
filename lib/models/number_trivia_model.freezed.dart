@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,200 +9,278 @@ part of 'number_trivia_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-NumberTriviaModel _$NumberTriviaModelFromJson(Map<String, dynamic> json) {
-  return _NumberTriviaModel.fromJson(json);
-}
 
 /// @nodoc
 mixin _$NumberTriviaModel {
-  int get number => throw _privateConstructorUsedError;
-  String get text => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  bool get found => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NumberTriviaModelCopyWith<NumberTriviaModel> get copyWith =>
-      throw _privateConstructorUsedError;
+ int get number; String get text; String get type; bool get found;
+/// Create a copy of NumberTriviaModel
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$NumberTriviaModelCopyWith<NumberTriviaModel> get copyWith => _$NumberTriviaModelCopyWithImpl<NumberTriviaModel>(this as NumberTriviaModel, _$identity);
+
+  /// Serializes this NumberTriviaModel to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is NumberTriviaModel&&(identical(other.number, number) || other.number == number)&&(identical(other.text, text) || other.text == text)&&(identical(other.type, type) || other.type == type)&&(identical(other.found, found) || other.found == found));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,number,text,type,found);
+
+@override
+String toString() {
+  return 'NumberTriviaModel(number: $number, text: $text, type: $type, found: $found)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $NumberTriviaModelCopyWith<$Res> {
-  factory $NumberTriviaModelCopyWith(
-          NumberTriviaModel value, $Res Function(NumberTriviaModel) then) =
-      _$NumberTriviaModelCopyWithImpl<$Res, NumberTriviaModel>;
-  @useResult
-  $Res call({int number, String text, String type, bool found});
-}
+abstract mixin class $NumberTriviaModelCopyWith<$Res>  {
+  factory $NumberTriviaModelCopyWith(NumberTriviaModel value, $Res Function(NumberTriviaModel) _then) = _$NumberTriviaModelCopyWithImpl;
+@useResult
+$Res call({
+ int number, String text, String type, bool found
+});
 
+
+
+
+}
 /// @nodoc
-class _$NumberTriviaModelCopyWithImpl<$Res, $Val extends NumberTriviaModel>
+class _$NumberTriviaModelCopyWithImpl<$Res>
     implements $NumberTriviaModelCopyWith<$Res> {
-  _$NumberTriviaModelCopyWithImpl(this._value, this._then);
+  _$NumberTriviaModelCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final NumberTriviaModel _self;
+  final $Res Function(NumberTriviaModel) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? number = null,
-    Object? text = null,
-    Object? type = null,
-    Object? found = null,
-  }) {
-    return _then(_value.copyWith(
-      number: null == number
-          ? _value.number
-          : number // ignore: cast_nullable_to_non_nullable
-              as int,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      found: null == found
-          ? _value.found
-          : found // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
-  }
+/// Create a copy of NumberTriviaModel
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? number = null,Object? text = null,Object? type = null,Object? found = null,}) {
+  return _then(_self.copyWith(
+number: null == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
+as int,text: null == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,found: null == found ? _self.found : found // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-abstract class _$$NumberTriviaModelImplCopyWith<$Res>
-    implements $NumberTriviaModelCopyWith<$Res> {
-  factory _$$NumberTriviaModelImplCopyWith(_$NumberTriviaModelImpl value,
-          $Res Function(_$NumberTriviaModelImpl) then) =
-      __$$NumberTriviaModelImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int number, String text, String type, bool found});
 }
 
-/// @nodoc
-class __$$NumberTriviaModelImplCopyWithImpl<$Res>
-    extends _$NumberTriviaModelCopyWithImpl<$Res, _$NumberTriviaModelImpl>
-    implements _$$NumberTriviaModelImplCopyWith<$Res> {
-  __$$NumberTriviaModelImplCopyWithImpl(_$NumberTriviaModelImpl _value,
-      $Res Function(_$NumberTriviaModelImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? number = null,
-    Object? text = null,
-    Object? type = null,
-    Object? found = null,
-  }) {
-    return _then(_$NumberTriviaModelImpl(
-      number: null == number
-          ? _value.number
-          : number // ignore: cast_nullable_to_non_nullable
-              as int,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      found: null == found
-          ? _value.found
-          : found // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
+/// Adds pattern-matching-related methods to [NumberTriviaModel].
+extension NumberTriviaModelPatterns on NumberTriviaModel {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _NumberTriviaModel value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _NumberTriviaModel() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _NumberTriviaModel value)  $default,){
+final _that = this;
+switch (_that) {
+case _NumberTriviaModel():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _NumberTriviaModel value)?  $default,){
+final _that = this;
+switch (_that) {
+case _NumberTriviaModel() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int number,  String text,  String type,  bool found)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _NumberTriviaModel() when $default != null:
+return $default(_that.number,_that.text,_that.type,_that.found);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int number,  String text,  String type,  bool found)  $default,) {final _that = this;
+switch (_that) {
+case _NumberTriviaModel():
+return $default(_that.number,_that.text,_that.type,_that.found);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int number,  String text,  String type,  bool found)?  $default,) {final _that = this;
+switch (_that) {
+case _NumberTriviaModel() when $default != null:
+return $default(_that.number,_that.text,_that.type,_that.found);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NumberTriviaModelImpl implements _NumberTriviaModel {
-  _$NumberTriviaModelImpl(
-      {required this.number,
-      required this.text,
-      required this.type,
-      required this.found});
 
-  factory _$NumberTriviaModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NumberTriviaModelImplFromJson(json);
+class _NumberTriviaModel implements NumberTriviaModel {
+  const _NumberTriviaModel({required this.number, required this.text, required this.type, required this.found});
+  factory _NumberTriviaModel.fromJson(Map<String, dynamic> json) => _$NumberTriviaModelFromJson(json);
 
-  @override
-  final int number;
-  @override
-  final String text;
-  @override
-  final String type;
-  @override
-  final bool found;
+@override final  int number;
+@override final  String text;
+@override final  String type;
+@override final  bool found;
 
-  @override
-  String toString() {
-    return 'NumberTriviaModel(number: $number, text: $text, type: $type, found: $found)';
-  }
+/// Create a copy of NumberTriviaModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$NumberTriviaModelCopyWith<_NumberTriviaModel> get copyWith => __$NumberTriviaModelCopyWithImpl<_NumberTriviaModel>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NumberTriviaModelImpl &&
-            (identical(other.number, number) || other.number == number) &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.found, found) || other.found == found));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, number, text, type, found);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NumberTriviaModelImplCopyWith<_$NumberTriviaModelImpl> get copyWith =>
-      __$$NumberTriviaModelImplCopyWithImpl<_$NumberTriviaModelImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NumberTriviaModelImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$NumberTriviaModelToJson(this, );
 }
 
-abstract class _NumberTriviaModel implements NumberTriviaModel {
-  factory _NumberTriviaModel(
-      {required final int number,
-      required final String text,
-      required final String type,
-      required final bool found}) = _$NumberTriviaModelImpl;
-
-  factory _NumberTriviaModel.fromJson(Map<String, dynamic> json) =
-      _$NumberTriviaModelImpl.fromJson;
-
-  @override
-  int get number;
-  @override
-  String get text;
-  @override
-  String get type;
-  @override
-  bool get found;
-  @override
-  @JsonKey(ignore: true)
-  _$$NumberTriviaModelImplCopyWith<_$NumberTriviaModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _NumberTriviaModel&&(identical(other.number, number) || other.number == number)&&(identical(other.text, text) || other.text == text)&&(identical(other.type, type) || other.type == type)&&(identical(other.found, found) || other.found == found));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,number,text,type,found);
+
+@override
+String toString() {
+  return 'NumberTriviaModel(number: $number, text: $text, type: $type, found: $found)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$NumberTriviaModelCopyWith<$Res> implements $NumberTriviaModelCopyWith<$Res> {
+  factory _$NumberTriviaModelCopyWith(_NumberTriviaModel value, $Res Function(_NumberTriviaModel) _then) = __$NumberTriviaModelCopyWithImpl;
+@override @useResult
+$Res call({
+ int number, String text, String type, bool found
+});
+
+
+
+
+}
+/// @nodoc
+class __$NumberTriviaModelCopyWithImpl<$Res>
+    implements _$NumberTriviaModelCopyWith<$Res> {
+  __$NumberTriviaModelCopyWithImpl(this._self, this._then);
+
+  final _NumberTriviaModel _self;
+  final $Res Function(_NumberTriviaModel) _then;
+
+/// Create a copy of NumberTriviaModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? number = null,Object? text = null,Object? type = null,Object? found = null,}) {
+  return _then(_NumberTriviaModel(
+number: null == number ? _self.number : number // ignore: cast_nullable_to_non_nullable
+as int,text: null == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
+as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,found: null == found ? _self.found : found // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+// dart format on

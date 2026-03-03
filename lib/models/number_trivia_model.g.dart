@@ -6,17 +6,15 @@ part of 'number_trivia_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NumberTriviaModelImpl _$$NumberTriviaModelImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NumberTriviaModelImpl(
+_NumberTriviaModel _$NumberTriviaModelFromJson(Map<String, dynamic> json) =>
+    _NumberTriviaModel(
       number: (json['number'] as num).toInt(),
       text: json['text'] as String,
       type: json['type'] as String,
       found: json['found'] as bool,
     );
 
-Map<String, dynamic> _$$NumberTriviaModelImplToJson(
-        _$NumberTriviaModelImpl instance) =>
+Map<String, dynamic> _$NumberTriviaModelToJson(_NumberTriviaModel instance) =>
     <String, dynamic>{
       'number': instance.number,
       'text': instance.text,

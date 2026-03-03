@@ -17,9 +17,7 @@ class CounterView extends ConsumerWidget {
     });
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Counter App'),
-      ),
+      appBar: AppBar(title: const Text('Counter App')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

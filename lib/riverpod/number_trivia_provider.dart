@@ -27,9 +27,7 @@ class NumberTrivia extends _$NumberTrivia {
       final response = await Isolate.run(() async {
         return await http.get(
           Uri.parse('$API_URL/random'),
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: {'Content-Type': 'application/json'},
         );
       });
 
@@ -45,25 +43,18 @@ class NumberTrivia extends _$NumberTrivia {
 
       state = AsyncData(NumberTriviaModel.fromJson(numberTrivia));
     } catch (e) {
-      return Future.error({
-        'success': false,
-        'message': e.toString(),
-      });
+      return Future.error({'success': false, 'message': e.toString()});
     }
   }
 
-  Future<void> getConcreteNumberTrivia(
-    int number,
-  ) async {
+  Future<void> getConcreteNumberTrivia(int number) async {
     try {
       state = const AsyncLoading();
 
       final response = await Isolate.run(() async {
         return await http.get(
           Uri.parse('$API_URL/$number'),
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: {'Content-Type': 'application/json'},
         );
       });
 
@@ -79,10 +70,7 @@ class NumberTrivia extends _$NumberTrivia {
 
       state = AsyncData(NumberTriviaModel.fromJson(numberTrivia));
     } catch (e) {
-      return Future.error({
-        'success': false,
-        'message': e.toString(),
-      });
+      return Future.error({'success': false, 'message': e.toString()});
     }
   }
 }

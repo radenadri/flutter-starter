@@ -7,9 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Riverpod Demo'),
-      ),
+      appBar: AppBar(title: const Text('Riverpod Demo')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

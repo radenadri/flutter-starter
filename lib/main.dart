@@ -21,10 +21,7 @@ void main() {
         child: MaterialApp.router(
           routerConfig: androidRouter,
           title: 'Flutter + Riverpod Boilerplate',
-          theme: ThemeData(
-            colorSchemeSeed: Colors.green,
-            useMaterial3: true,
-          ),
+          theme: ThemeData(colorSchemeSeed: Colors.green, useMaterial3: true),
         ),
       ),
     );

@@ -6,20 +6,50 @@ part of 'number_trivia_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(NumberTrivia)
+final numberTriviaProvider = NumberTriviaProvider._();
+
+final class NumberTriviaProvider
+    extends $AsyncNotifierProvider<NumberTrivia, NumberTriviaModel> {
+  NumberTriviaProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'numberTriviaProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$numberTriviaHash();
+
+  @$internal
+  @override
+  NumberTrivia create() => NumberTrivia();
+}
+
 String _$numberTriviaHash() => r'f49c915be0158440d3ddf8c78d743c832edf9b6f';
 
-/// See also [NumberTrivia].
-@ProviderFor(NumberTrivia)
-final numberTriviaProvider =
-    AutoDisposeAsyncNotifierProvider<NumberTrivia, NumberTriviaModel>.internal(
-  NumberTrivia.new,
-  name: r'numberTriviaProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$numberTriviaHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$NumberTrivia = AutoDisposeAsyncNotifier<NumberTriviaModel>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+abstract class _$NumberTrivia extends $AsyncNotifier<NumberTriviaModel> {
+  FutureOr<NumberTriviaModel> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref =
+        this.ref as $Ref<AsyncValue<NumberTriviaModel>, NumberTriviaModel>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<NumberTriviaModel>, NumberTriviaModel>,
+              AsyncValue<NumberTriviaModel>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

@@ -29,13 +29,12 @@ class _NumberTriviaViewState extends ConsumerState<NumberTriviaView> {
 
   @override
   Widget build(BuildContext context) {
-    final AsyncValue<NumberTriviaModel> numberTrivia =
-        ref.watch(numberTriviaProvider);
+    final AsyncValue<NumberTriviaModel> numberTrivia = ref.watch(
+      numberTriviaProvider,
+    );
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Number Trivia App'),
-      ),
+      appBar: AppBar(title: const Text('Number Trivia App')),
       body: Center(
         child: SingleChildScrollView(
           child: numberTrivia.when(
@@ -56,19 +55,21 @@ class _NumberTriviaViewState extends ConsumerState<NumberTriviaView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Builder(builder: (context) {
-              if (numberTrivia.number == -1) {
-                return const Text(
-                  'Please enter a number',
-                  style: TextStyle(fontSize: 28),
-                );
-              }
+            Builder(
+              builder: (context) {
+                if (numberTrivia.number == -1) {
+                  return const Text(
+                    'Please enter a number',
+                    style: TextStyle(fontSize: 28),
+                  );
+                }
 
-              return Text(
-                numberTrivia.number.toString(),
-                style: const TextStyle(fontSize: 50),
-              );
-            }),
+                return Text(
+                  numberTrivia.number.toString(),
+                  style: const TextStyle(fontSize: 50),
+                );
+              },
+            ),
             const SizedBox(height: 20.0),
             Text(
               numberTrivia.text,
@@ -86,7 +87,7 @@ class _NumberTriviaViewState extends ConsumerState<NumberTriviaView> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 if (inputNumberController.text.isEmpty) {
                   showDialog(
                     context: context,
@@ -106,15 +107,18 @@ class _NumberTriviaViewState extends ConsumerState<NumberTriviaView> {
                   return;
                 }
 
-                ref
+                await ref
                     .read(numberTriviaProvider.notifier)
                     .getConcreteNumberTrivia(
                       int.parse(inputNumberController.text),
-                    )
-                    .then((value) {
-                  inputNumberController.clear();
-                  FocusScope.of(context).unfocus();
-                });
+                    );
+
+                if (!mounted) {
+                  return;
+                }
+
+                inputNumberController.clear();
+                FocusScope.of(context).unfocus();
               },
               child: const Text('Get concrete number'),
             ),

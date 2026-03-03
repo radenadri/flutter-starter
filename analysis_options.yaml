@@ -10,8 +10,7 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
-  plugins:
-    - custom_lint
+  plugins: []
 
 linter:
   # The lint rules applied to this project can be customized in the

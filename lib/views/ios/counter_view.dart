@@ -17,9 +17,7 @@ class CounterView extends ConsumerWidget {
     });
 
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        middle: Text('Counter App'),
-      ),
+      navigationBar: const CupertinoNavigationBar(middle: Text('Counter App')),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
